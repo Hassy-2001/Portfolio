@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d017a6732c.js" crossorigin="anonymous"></script>
+    <title>Hassan.Dev Portfolio </title>
+</head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu",sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: #080808;
+    color: #fff;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/*          Header section starts from here           */
+
+#header{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+    width: 150px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 22px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.header-text h1 span{
+    color: #ff004f;
+}
+
+/*          Header section ends here           */
+
+/*          About section starts from here           */
+
+#about{
+    padding: 80px 0px;
+    color: #ababab;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+    margin: -80px 0px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.sub-title{
+    font-size: 55px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-content ul li{
+    list-style: none;
+    margin: 10px 0px;
+}
+.tab-content ul li span{
+    color: #b54769;
+    font-size: 15px;
+}
+
+.tab-content {
+    display: none;
+}
+.tab-content.active-tab{
+    display: block;
+}
+
+/*      About section ends here       */
+
+/*         Service section starts from here    */
+
+#service{
+    padding: 50px 0;
+}
+
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.services-list div{
+    background-color: #262626;
+    padding: 40px;
+    font-size: 15px;
+    font-weight: 300;
+    border-right: 10px;
+    transition: background 0.5s,transform 0.5s;
+}
+
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.services-list div h2{
+    margin-bottom: 15px;
+    font-size: 25px;
+    font-weight: 500;
+}
+.services-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.services-list div:hover{
+    background: #ff004f;
+    transform: translateY(-10px);
+}
+
+/*          Service section ends  here          */
+
+/*          Work section starts from here       */
+
+#portfolio{
+    padding: 20px 0px;
+}
+
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.work img{
+    border-radius: 10px;
+    width: 100%;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer{
+    font-size: 15px;
+    width: 100%;
+    height: 0;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    transition: height 0.5s;
+}
+
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 10px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+
+.btn:hover{
+    background: #ff004f;
+}
+/*          Work section ends here         */
+
+/*          Contact section starts from here      */
+
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 35%;
+}
+.contact-left p{
+    margin: 30px;
+}
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons{
+    margin-top: 30px;
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 25px;
+    margin-right: 20px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+
+.btn.btn2{
+    display: inline-block;
+    background: #ff004f
+}
+
+.contact-right form{
+    width: 100%;
+}
+
+form input,form textarea{
+    width: 100%;
+    outline: none;
+    border: 0;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 10px;
+
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 15px;
+}
+
+#msg{
+    color: #fff;
+    margin-top: -10px;
+    display: block;
+}
+
+/*        Contact section ends here         */
+
+/*         Media Query starts from here      */
+nav .fas{
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .header-text{
+        margin-top: 85%;
+        font-size: 18px;
+    }
+    .header-text h1{
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+    nav .fas{
+        display: block;
+        font-size: 25px;       
+    }
+    nav ul{
+        background: #331d25;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1,.about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+        margin-top: 55px;
+    }
+    .tab-links{
+        font-size: 16px;
+    }
+    .contact-left,.contact-right{
+        flex-basis: 100%;
+    }
+    .contact-left{
+        text-align: center;
+    }
+    .contact-right{
+        text-align: center;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+}
+/*         Media Query ends here      */
+</style>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png.png" class="logo">
+                <ul id="sidebar">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#service">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Web/App Developer</p>
+                <h1>Hi, I'm <span>Hassan</span><br>I am from Pakistan</h1>
+                <div>
+                    I am a
+                    <span id="element"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+ <!-------------About section--------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/aboutme.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1><br>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                             Officiis, odio fugit aliquam nobis, 
+                             voluptatem tempore corrupti quos dolores incidunt error repudiandae, 
+                             repellendus neque! Eligendi aperiam sit error perferendis incidunt nemo maxime.
+                              Impedit, neque quos?.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-content active-tab" id="skills">
+                            <ul>
+                                <li><span>Front-End Development</span><br>Building Components that Interact with users</li>
+                                <li><span>Back-End Development</span><br>Working on server-side software</li>
+                                <li><span>Graphic Designing/Video Editing</span><br>Basic level of graphic designing and video editing</li>
+                            </ul>
+                        </div>
+                        <div class="tab-content" id="experience">
+                            <ul>
+                                <li><span>2021- Current</span><br>Python/Django Developer</li>
+                                <li><span>2022-Current</span><br>Freelancing on Fiverr</li>
+                                <li><span>2018-Current</span><br>Graphic Designing and video editing on Freelancing platforms</li>
+                            </ul>
+                        </div>
+                        <div class="tab-content" id="education">
+                            <ul>
+                                <li><span>2021</span><br>Full Stack Python Programming Course from Aptech</li>
+                                <li><span>2023</span><br>Frontend Development Course from CodeInstitute.se</li>
+                                <li><span>2022</span><br>Graphic Designing and Video Editing Course from GFX Mentor</li>
+                                <li><span>2023-Current</span><br>BSCS from Iqra University</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ <!-------------Service section--------------->
+    <div id="service">
+        <div class="container">
+            <div class="sub-title">My Services</div>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web/App Development</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                         Hic nam ducimus vitae, quidem ipsam porro?</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-blog"></i>
+                    <h2>Content Writing</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                         Hic nam ducimus vitae, quidem ipsam porro?</p>
+                    <a href="#">Learn More</a>                
+                </div>
+                <div>
+                    <i class="fa-solid fa-image"></i>
+                    <h2>Multimedia Designer</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                         Hic nam ducimus vitae, quidem ipsam porro?</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+ <!-------------Work Section--------------->
+
+ <div id="portfolio">
+    <div class="container">
+        <div class="sub-title">My Work</div>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/ecome.jpg" alt="">
+                <div class="layer">
+                    <h3>E-Commerce Website</h3>
+                    <p>I have developed multiple online shopping platforms by using
+                         Django Framework along with Html,Css and javaScript.</p>
+                         <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/po.jpg" alt="">
+                <div class="layer">
+                    <h3>Portfolio Website</h3>
+                    <p>I have developed multiple portfolio websites by using
+                          Html,Css and javaScript.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/cms.png" alt="">
+                <div class="layer">
+                    <h3>CMS Website</h3>
+                    <p>I have developed multiple custom mangement websites by using
+                        Django Framework along with Html,Css and javaScript.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="" class="btn">See more</a>
+    </div>
+ </div>
+ <!-------------Work Section--------------->
+
+ <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Us</h1>
+                <p><i class="fa-solid fa-envelope"></i>Example@gmail.com</p>
+                <p><i class="fa-solid fa-address-book"></i>+92312-2416272</p>
+
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-solid fa-eye"></i></a>
+                </div>
+                <a href="images/hassan's Resume.pdf" download  class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                <input type="text" name="Name" required placeholder="Enter Your Name">
+                <input type="email" name="Email" required placeholder="Enter Your Email">
+                <textarea name="Message" rows="6" placeholder="Enter Your Message"></textarea>
+                <button type="submit" class="btn btn2">Submit</button>
+                <div id="msg">Reset</div>
+            </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>All rights reserved by Hassan.Dev</p>
+    </div>
+</div>
+<!-------------Contact Section--------------->
+
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<script>
+var typed = new Typed('#element', {
+    strings: ['Web Developer.', 'Full Stack Developer.', 'Multimedia Designer.'],
+    typeSpeed: 50,
+});
+const tabLinks = document.getElementsByClassName("tab-links");
+const tabContents = document.getElementsByClassName("tab-content");
+
+function opentab(tabname){
+    for (tablink of tabLinks) {
+        tablink.classList.remove("active-link");
+    }
+    for (tabContent of tabContents) {
+        tabContent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add('active-tab')
+}
+</script>
+<script>
+var sideBar = document.getElementById("sidebar");
+function openmenu(){
+    sideBar.style.right = "0";
+}
+function closemenu(){
+    sideBar.style.right = "-200px";
+}
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwsUcu2LK6InhI5z2CDDLLGvHJSZXYUzjU4VdXfTI9uUN1iHoWyMkN9wzPFLPrg0lk/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const message = document.getElementById("msg");
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            message.innerHTML = "Message Sent Succesfully";
+            setTimeout(function(){
+                message.innerHTML = "";
+            },5000)
+            form.reset();
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
